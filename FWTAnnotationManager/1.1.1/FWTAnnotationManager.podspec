@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      =  'Apache License, Version 2.0'
   s.homepage     = 'http://github.com/FutureWorkshops/FWTAnnotationManager'
   s.author       = { 'Marco Meschini' => 'marco@futureworkshops.com' }
-  s.source       = { :git => 'git@github.com/FutureWorkshops/FWTAnnotationManager.git', :tag => '1.1.1' }
+  s.source       = { :git => 'git@github.com:FutureWorkshops/FWTAnnotationManager.git', :tag => '1.1.1' }
   s.source_files = 'FWTAnnotationManager/FWTAnnotationManager/FWT*.{h,m}'
   s.frameworks   = 'UIKit'
 end
