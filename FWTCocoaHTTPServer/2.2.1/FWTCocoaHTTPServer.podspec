@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary        = 'A small, lightweight, embeddable HTTP server for Mac OS X or iOS applications.'
   s.homepage       = 'https://github.com/robbiehanson/CocoaHTTPServer'
   s.authors        = { 'Robbie Hanson' => 'cocoahttpserver@googlegroups.com' }
-  s.source         = { :git => 'https://github.com/FutureWorkshops/CocoaHTTPServer.git', :tag => '2.2.1-fwadditions' }
+  s.source         = { :git => 'https://github.com/FutureWorkshops/CocoaHTTPServer.git', :commit => 'a9548c0413a97f570d679390e97963317dae1108' }
   s.source_files   = '{Core,Extensions}/**/*.{h,m}'
 
 
