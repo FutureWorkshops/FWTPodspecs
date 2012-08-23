@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      =  'Apache License, Version 2.0'
   s.homepage     = 'https://github.com/FutureWorkshops/FWTPageViewController'
   s.author       = { 'Marco Meschini' => 'marco@futureworkshops.com' }
-  s.source       = { :git => 'https://github.com/FutureWorkshops/FWTPageViewController.git', :tag => '1.0.1' }
+  s.source       = { :git => 'git@github.com:FutureWorkshops/FWTPageViewController.git', :tag => '1.0.1' }
   s.source_files = 'FWTPageViewController/FWTPageViewController/FWT*.{h,m}'
   s.frameworks   = 'UIKit'
 end
