@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name     = 'FWT_RestKit'
+  s.name     = 'RestKit'
   s.version  = '0.10.3.1'
   s.summary  = 'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
   s.homepage = 'http://www.restkit.org'
@@ -14,17 +14,17 @@ Pod::Spec.new do |s|
   s.preferred_dependency = 'JSON'
 
   s.subspec 'JSON' do |js|
-    js.dependency 'FWT_RestKit/Network'
-    js.dependency 'FWT_RestKit/ObjectMapping/JSON'
-    js.dependency 'FWT_RestKit/ObjectMapping/CoreData'
-    js.dependency 'FWT_RestKit/UI'
+    js.dependency 'RestKit/Network'
+    js.dependency 'RestKit/ObjectMapping/JSON'
+    js.dependency 'RestKit/ObjectMapping/CoreData'
+    js.dependency 'RestKit/UI'
   end
 
   s.subspec 'XML' do |xs|
-    xs.dependency 'FWT_RestKit/Network'
-    xs.dependency 'FWT_RestKit/ObjectMapping/XML'
-    xs.dependency 'FWT_RestKit/ObjectMapping/CoreData'
-    xs.dependency 'FWT_RestKit/UI'
+    xs.dependency 'RestKit/Network'
+    xs.dependency 'RestKit/ObjectMapping/XML'
+    xs.dependency 'RestKit/ObjectMapping/CoreData'
+    xs.dependency 'RestKit/UI'
   end
 
   ### Subspecs
@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   s.subspec 'ObjectMapping' do |os|
     os.source_files = 'Code/ObjectMapping'
     os.dependency     'ISO8601DateFormatter', '>= 0.6'
-    os.dependency     'FWT_RestKit/Network'
+    os.dependency     'RestKit/Network'
 
     os.subspec 'JSON' do |jos|
       jos.source_files = 'Code/Support/Parsers/JSON/RKJSONParserJSONKit.{h,m}'
