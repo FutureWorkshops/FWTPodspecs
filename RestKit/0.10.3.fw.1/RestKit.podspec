@@ -1,20 +1,75 @@
 Pod::Spec.new do |s|
-  s.name           = 'FWTCocoaHTTPServer'
-  s.version        = '2.2.1'
-  s.license        = 'BSD'
-  s.summary        = 'A small, lightweight, embeddable HTTP server for Mac OS X or iOS applications.'
-  s.homepage       = 'https://github.com/robbiehanson/CocoaHTTPServer'
-  s.authors        = { 'Robbie Hanson' => 'cocoahttpserver@googlegroups.com' }
-  s.source         = { :git => 'https://github.com/FutureWorkshops/RestKit.git', :commit => '1cd003d29b8b3b4ef8cef0bc403d80108e6db59f' }
-  s.source_files   = '{Core,Extensions}/**/*.{h,m}'
-  s.requires_arc = true
+  s.name     = 'RestKit'
+  s.version  = '0.10.3.fw.1'
+  s.summary  = 'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
+  s.homepage = 'http://www.restkit.org'
+  s.author   = { 'Blake Watters' => 'blakewatters@gmail.com' }
+  s.source   = { :git => 'https://github.com/FutureWorkshops/RestKit.git', :tag => 'fw-v0.10.3.1' }
+  s.license  = 'Apache License, Version 2.0'
 
-  s.ios.frameworks = 'CFNetwork', 'Security'
-  s.osx.frameworks = 'CoreServices', 'Security'
+  s.source_files =  'Code/RestKit.h'
 
-  s.library        = 'xml2'
-  s.xcconfig       = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  ### Preferred dependencies
 
-  s.dependency "CocoaAsyncSocket", "~> 0.0.1"
-  s.dependency "CocoaLumberjack", "~> 1.3.0"
+  s.preferred_dependency = 'JSON'
+
+  s.subspec 'JSON' do |js|
+    js.dependency 'RestKit/Network'
+    js.dependency 'RestKit/ObjectMapping/JSON'
+    js.dependency 'RestKit/ObjectMapping/CoreData'
+    js.dependency 'RestKit/UI'
+  end
+
+  s.subspec 'XML' do |xs|
+    xs.dependency 'RestKit/Network'
+    xs.dependency 'RestKit/ObjectMapping/XML'
+    xs.dependency 'RestKit/ObjectMapping/CoreData'
+    xs.dependency 'RestKit/UI'
+  end
+
+  ### Subspecs
+
+  s.subspec 'Network' do |ns|
+    ns.source_files   = 'Code/Network', 'Code/Support'
+    ns.ios.frameworks = 'CFNetwork', 'Security', 'MobileCoreServices', 'SystemConfiguration'
+    ns.osx.frameworks = 'CoreServices', 'Security', 'SystemConfiguration'
+    ns.dependency       'LibComponentLogging-NSLog', '>= 1.0.4'
+    ns.dependency       'cocoa-oauth'
+    ns.dependency       'FileMD5Hash'
+    ns.dependency       'SOCKit'
+  end
+
+  s.subspec 'UI' do |us|
+    us.ios.source_files = 'Code/UI'
+    us.ios.framework    = 'QuartzCore'
+    #us.ios.dependency     'UDTableView'
+
+    us.osx.source_files = 'Code/UI/UIImage+RKAdditions.{h,m}'
+  end
+
+  s.subspec 'ObjectMapping' do |os|
+    os.source_files = 'Code/ObjectMapping'
+    os.dependency     'ISO8601DateFormatter', '>= 0.6'
+    os.dependency     'RestKit/Network'
+
+    os.subspec 'JSON' do |jos|
+      jos.source_files = 'Code/Support/Parsers/JSON/RKJSONParserJSONKit.{h,m}'
+      jos.dependency     'JSONKit', '>= 1.5pre'
+    end
+
+    os.subspec 'XML' do |xos|
+      xos.source_files = 'Code/Support/Parsers/XML/RKXMLParserXMLReader.{h,m}'
+      xos.libraries    = 'xml2'
+      xos.dependency     'XMLReader'
+    end
+
+    os.subspec 'CoreData' do |cdos|
+      cdos.source_files = 'Code/CoreData'
+      cdos.frameworks   = 'CoreData'
+    end
+  end
+
+  s.subspec 'Testing' do |ts|
+    ts.source_files = 'Code/Testing'
+  end
 end
