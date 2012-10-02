@@ -14,17 +14,17 @@ Pod::Spec.new do |s|
   s.preferred_dependency = 'JSON'
 
   s.subspec 'JSON' do |js|
-    js.dependency 'RestKit/Network'
-    js.dependency 'RestKit/ObjectMapping/JSON'
-    js.dependency 'RestKit/ObjectMapping/CoreData'
-    js.dependency 'RestKit/UI'
+    js.dependency 'FWT_RestKit/Network'
+    js.dependency 'FWT_RestKit/ObjectMapping/JSON'
+    js.dependency 'FWT_RestKit/ObjectMapping/CoreData'
+    js.dependency 'FWT_RestKit/UI'
   end
 
   s.subspec 'XML' do |xs|
-    xs.dependency 'RestKit/Network'
-    xs.dependency 'RestKit/ObjectMapping/XML'
-    xs.dependency 'RestKit/ObjectMapping/CoreData'
-    xs.dependency 'RestKit/UI'
+    xs.dependency 'FWT_RestKit/Network'
+    xs.dependency 'FWT_RestKit/ObjectMapping/XML'
+    xs.dependency 'FWT_RestKit/ObjectMapping/CoreData'
+    xs.dependency 'FWT_RestKit/UI'
   end
 
   ### Subspecs
@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   s.subspec 'ObjectMapping' do |os|
     os.source_files = 'Code/ObjectMapping'
     os.dependency     'ISO8601DateFormatter', '>= 0.6'
-    os.dependency     'RestKit/Network'
+    os.dependency     'FWT_RestKit/Network'
 
     os.subspec 'JSON' do |jos|
       jos.source_files = 'Code/Support/Parsers/JSON/RKJSONParserJSONKit.{h,m}'
