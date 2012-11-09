@@ -22,5 +22,5 @@ Pod::Spec.new do |s|
   s.author       = { 'RBS' => 'rbs@futureworkshops.com' }
   s.source       = { :git => 'git@git.office.futureworkshops.com:RBS-common.git', :tag => '2.3' }
   s.source_files = '*/*.{h,m}'
-  s.frameworks   = 'CoreGraphics', 'QuartzCore', 'UIKit', 'Security', 'SystemConfiguration', 'Foundation', 'MessageUI', 'CoreFoundation', 'SenTestingKit', 'AppKit', 'CoreData'
+  s.frameworks   = 'CoreGraphics', 'QuartzCore', 'UIKit', 'Security', 'SystemConfiguration', 'Foundation', 'MessageUI', 'CoreFoundation', 'SenTestingKit'', 'CoreData'
 end
