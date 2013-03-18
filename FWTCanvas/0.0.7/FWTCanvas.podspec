@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Marco Meschini' => 'marco@futureworkshops.com' }
   s.source       = { :git => "git@github.com:FutureWorkshops/FWTCanvas.git", :tag => "0.0.7" }
   s.platform     = :ios
-  s.source_files = 'FWTCanvas/FWTCanvas/*.{h,m}' 
+  s.source_files = 'FWTCanvas/*.{h,m}' 
   s.framework    = 'QuartzCore'
 
   s.dependency     'FWTResizerView'
