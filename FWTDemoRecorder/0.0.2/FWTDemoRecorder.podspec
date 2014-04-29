@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
                    Utility to enable recording device screen.
                    DESC
 
-  s.homepage     = "https://github.com/FutureWorkshops/FWTDemoRecorder"
+  s.homepage     = "git@github.com:FutureWorkshops/FWTDemoRecorder.git"
  # s.license      = { :type => 'Apache License Version 2.0', :file => 'LICENSE' }
   s.authors       = [ "Jonathan Flintham" => "jonathan@futureworkshops.com", "Kamil Kocemba" => "kamil@futureworkshops.com" ]
 
