@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         =  'RestKit'
+  s.name         =  'FWTRestKit'
   s.version      =  '0.20.3.fw.1'
   s.summary      =  'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
   s.homepage     =  'http://www.restkit.org'

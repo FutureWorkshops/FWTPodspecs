@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
-  s.name     = 'RestKit'
-  s.version  = '0.10.3.fw.1'
+  s.name     = 'FWTRestKit'
+  s.version  = '0.10.3.fw.2'
   s.summary  = 'RestKit is a framework for consuming and modeling RESTful web resources on iOS and OS X.'
   s.homepage = 'http://www.restkit.org'
   s.author   = { 'Blake Watters' => 'blakewatters@gmail.com' }
-  s.source   = { :git => 'https://github.com/FutureWorkshops/RestKit.git', :tag => 'fw-v0.10.3.1' }
+  s.source   = { :git => 'https://github.com/FutureWorkshops/RestKit.git', :tag => 'fw-v0.10.3.2' }
   s.license  = 'Apache License, Version 2.0'
 
   s.source_files =  'Code/RestKit.h'
