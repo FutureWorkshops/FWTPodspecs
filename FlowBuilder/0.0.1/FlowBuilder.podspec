@@ -19,12 +19,12 @@ Pod::Spec.new do |spec|
                    DESC
 
   spec.homepage     = "https://github.com/FutureWorkshops/FW-FlowBuilder-iOS"
-  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
+  spec.license      = "Copyright (c) 2020 Future Workshops"
   spec.author             = { "Future Workshops" => "info@futureworkshops.com" }
   spec.platform     = :ios, "13.0"
   spec.swift_versions = "5.0"
   
-  spec.source       = { :git => "git@github.com:FutureWorkshops/FW-FlowBuilder-iOS.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/FutureWorkshops/FW-FlowBuilder-iOS.git", :tag => "#{spec.version}" }
 
   spec.source_files  = "FlowBuilder/FlowBuilder/**/*.{h,m,swift}"
   spec.public_header_files = "FlowBuilder/FlowBuilder/**/*.h"
