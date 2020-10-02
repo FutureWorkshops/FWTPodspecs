@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
     s.license               = { :type => 'Copyright', :file => 'LICENSE' }
     s.author                = { 'Future Workshops' => 'info@futureworkshops.com' }
     s.source                = { :git => 'https://github.com/FutureWorkshops/MobileWorkflowCore-iOS-Distribution.git', :tag => "#{s.version}" }
-    s.vendored_frameworks   = 'MobileWorkflowCore.xcframework', 'ResearchKit.xcframework', 'AppAuth.xcframework'
+    s.vendored_frameworks   = 'MobileWorkflowCore.xcframework', 'ResearchKit.xcframework'
 	s.dependency            'AppAuth'
     s.platform              = :ios
     s.swift_version         = '5'
