@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.author                = { 'Future Workshops' => 'info@futureworkshops.com' }
     s.source                = { :git => 'https://github.com/FutureWorkshops/MobileWorkflowCore-iOS-Distribution.git', :tag => "#{s.version}" }
     s.platform              = :ios
-    s.swift_version         = '5.2'
+    s.swift_version         = '5.3'
     s.ios.deployment_target = '13.0'
     s.default_subspecs      = 'Core'
 
