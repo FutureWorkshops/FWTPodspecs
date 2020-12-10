@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 	cs.dependency            'DocumentReaderFullRFID', '~> 5.3.0'
         cs.source_files          = 'MWRegulaPlugin/MWRegulaPlugin/**/*.swift'
         cs.resource_bundles = {
-	    'MWRegulaPlugin' => ['MWRegulaPlugin/MWRegulaPlugin/**/*.dat']
+	    'en.lproj' => ['MWRegulaPlugin/MWRegulaPlugin/**/*.dat']
 	}
     end
 end
